@@ -5,15 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contato extends Model
+class Proprietario extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'nome',
+        'telefone',
         'email',
-        'phone',
-        'message',
-        'ref_imovel'
+        'obs',
     ];
+
+    public function imovel(){
+        return $this->hasMany(Imovel::class);
+    }
 }

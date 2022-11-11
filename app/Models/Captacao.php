@@ -10,17 +10,17 @@ class Captacao extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'nome',
         'phone',
         'tipo_imovel',
         'destination',
         'valor',
+        'endereco',
         'n_quartos',
         'n_banheiros',
         'n_suites',
         'vagas_garagem',
         'area_util',
-        'mais_detalhes',
-        'imgs'
+        'mais_detalhes'
     ];
 }

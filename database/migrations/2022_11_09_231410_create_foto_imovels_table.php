@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('foto_imovels', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('Imovel_id')->constrained();
+            $table->integer('order');
+            $table->string('path_img');
             $table->timestamps();
         });
     }
